@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title></title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <div id="intro-overlay">
+
+        <div class="intro-card">
+
+            <p class="intro-label">WELCOME TO THE DATING MARKET</p>
+
+            <h1>For-Ex Sake!</h1>
+
+            <p class="intro-tagline">
+                High risk. Low standards. Negative returns.
+            </p>
+
+            <div>
+                <p class = intro-rules>Heres the breakdown: You have 100 minutes, and three boys to use them for. The aim of the game is to use their fluctuating affection index for you in order to gain as many minutes as possible.</p>
+            </div>
+
+            <h2>The Ex-change: How to Play</h2>
+
+            
+
+            <div class="intro-rules">
+
+                <p><strong>Invest in Boys:</strong>
+                    Divide your minutes between Alex, Jamie and Taylor.
+                    You can also save some minutes.
+                </p>
+
+                <p><strong>Affection Levels:</strong>
+                    Each boy's affection fluctuates after random
+                    relationship news. Your investment determines
+                    how many minutes you gain or lose.
+                </p>
+
+                <p><strong>Breaking Scandal:</strong>
+                    One surprise scandal happens in a randomly
+                    chosen round and causes an extra gain or loss.
+                </p>
+
+
+            </div>
+
+
+            <button id="start-game-button">
+                I'm Ready to Risk It xoxo
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <header>
+        <h1>For-Ex Sake! ♥</h1>
+        <p>The dating stock market. Invest your time, not your heart.</p>
+    </header>
+
+    <main>
+
+        <section id="game-info">
+            <h2>Round <span id="round">1</span> / 3</h2>
+            <p>Balance: <span id="balance">100</span> minutes</p>
+        </section>
+
+        <section id="characters">
+
+            <article class="boy-card">
+                <img src="alex.png" alt="Alex" class="boy-avatar">
+                <h2>Alex ♥</h2>
+                <p>The Loyal Partner</p>
+                <p>Possible returns: -5% / +10%</p>
+                <p>Affection Index: <strong id="price-alex">100.00</strong></p>
+
+                <label for="alex">Invest minutes:</label>
+                <input type="number" id="alex" min="0" value="0">
+            </article>
+
+            <article class="boy-card">
+                <img src="jamie.png" alt="Alex" class="boy-avatar">
+                <h2>Jamie ♥</h2>
+                <p>The Situationship</p>
+                <p>Possible returns: -15% / +25%</p>
+                <p>Affection Index: <strong id="price-jamie">100.00</strong></p>
+
+                <label for="jamie">Invest minutes:</label>
+                <input type="number" id="jamie" min="0" value="0">
+            </article>
+
+            <article class="boy-card">
+                <img src="taylor.png" alt="Alex" class="boy-avatar">
+                <h2>Taylor ♥</h2>
+                <p>The Chaotic Ex</p>
+                <p>Possible returns: -30% / +50%</p>
+                <p>Affection Index: <strong id="price-taylor">100.00</strong></p>
+
+                <label for="taylor">Invest minutes:</label>
+                <input type="number" id="taylor" min="0" value="0">
+            </article>
+
+        </section>
+
+        <section id="portfolio">
+            <h2>Your Portfolio</h2>
+            <p>Minutes remaining: <span id="remaining">100</span></p>
+
+            <button id="invest-button">Confirm Investments ♡</button>
+        </section>
+
+        <section id="results" hidden>
+            <h2>Breaking Relationship News!</h2>
+            <div id="news"></div>
+
+            <div id="scandal-section" hidden>
+                <h2>Breaking Scandal!</h2>
+                <div id="scandal"></div>
+            </div>
+
+            <h2>Round Results</h2>
+            <p id="round-profit"></p>
+            <div id="stock-history">
+                <h2>Affection Index History</h2>
+                <canvas id="stock-chart"></canvas>
+            </div>
+            <p id="new-balance"></p>
+
+            <button id="next-button">Next Round ♥</button>
+        </section>
+
+    </main>
+
+
+<!-- Cute scandal pop-up -->
+<div id="scandal-overlay" hidden>
+
+    <div class="scandal-popup">
+
+        <h2>🚨 BREAKING SCANDAL 🚨</h2>
+
+        <img id="popup-image" class="popup-avatar" alt="Boy">
+
+        <h3 id="popup-name"></h3>
+
+        <p id="popup-event"></p>
+
+        <div class="popup-stats">
+            <p id="popup-affection"></p>
+            <p id="popup-profit"></p>
+        </div>
+
+        <button id="close-scandal">
+            Return
+        </button>
+
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>

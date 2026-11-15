@@ -1,0 +1,375 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #ffe1eb;
+    color: #57253e;
+}
+
+header {
+    background: #9e345d;
+    color: white;
+    text-align: center;
+    padding: 35px;
+}
+
+h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+main {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+#game-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+#characters {
+    display: flex;
+    gap: 20px;
+}
+
+.boy-card {
+    flex: 1;
+    background: white;
+    border: 3px solid #f5a5c3;
+    border-radius: 20px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 6px 15px #d58ba455;
+}
+
+.boy-card h2 {
+    color: #c13e79;
+    font-size: 32px;
+}
+
+.boy-avatar {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 15px;
+}
+
+input {
+    display: block;
+    width: 100%;
+    margin-top: 15px;
+    padding: 12px;
+    border: 2px solid #e9a1bf;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+#portfolio,
+#results {
+    background: white;
+    border-radius: 20px;
+    padding: 25px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+button {
+    background: #c13e79;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 15px 35px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #90264f;
+}
+
+#news,
+#scandal {
+    text-align: left;
+    line-height: 1.8;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+@media (max-width: 700px) {
+    #characters {
+        flex-direction: column;
+    }
+
+    #game-info {
+        flex-direction: column;
+    }
+}
+
+
+/* Relationship results cards */
+
+.result-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    background: #fff0f5;
+    border: 2px solid #f5a5c3;
+    border-radius: 18px;
+
+    padding: 18px;
+    margin-bottom: 15px;
+
+    text-align: left;
+}
+
+.result-avatar {
+    width: 90px;
+    height: 90px;
+
+    object-fit: cover;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.result-text h3 {
+    margin: 0 0 8px;
+    color: #c13e79;
+}
+
+.result-text p {
+    margin: 5px 0;
+}
+
+.positive {
+    color: #16834b;
+    font-weight: bold;
+}
+
+.negative {
+    color: #cf355b;
+    font-weight: bold;
+}
+
+#stock-history {
+    margin-top: 35px;
+    padding: 25px;
+    background: #fff0f5;
+    border: 2px solid #f5a5c3;
+    border-radius: 20px;
+}
+
+#stock-chart {
+    width: 100% !important;
+    max-height: 350px;
+}
+
+
+/* INTRO POP-UP */
+
+#intro-overlay {
+    position: fixed;
+    inset: 0;
+
+    background: rgba(70, 20, 45, 0.65);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 1000;
+    padding: 20px;
+}
+
+.intro-card {
+    background: #fffafc;
+    border: 4px solid #f2a0c1;
+    border-radius: 25px;
+
+    padding: 35px;
+    max-width: 560px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+
+    text-align: center;
+
+    box-shadow: 0 15px 50px rgba(90, 20, 55, 0.3);
+}
+
+.intro-label {
+    color: #c13e79;
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+.intro-card h1 {
+    color: #a82c65;
+    font-size: 42px;
+    margin: 12px 0;
+}
+
+.intro-tagline {
+    color: #a95a7e;
+    font-style: italic;
+    margin-bottom: 25px;
+}
+
+.intro-card h2 {
+    color: #a82c65;
+}
+
+.intro-rules {
+    text-align: left;
+    line-height: 1.6;
+}
+
+.intro-rules p {
+    background: #fff0f5;
+    border-radius: 12px;
+    padding: 12px 15px;
+    margin: 10px 0;
+}
+
+.intro-warning {
+    background: #fce2ed;
+    padding: 14px;
+    border-radius: 12px;
+    font-weight: bold;
+    color: #93335d;
+    margin-top: 20px;
+}
+
+#start-game-button {
+    background: #c13e79;
+    color: white;
+
+    border: none;
+    border-radius: 30px;
+
+    padding: 16px 30px;
+    margin-top: 15px;
+
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#start-game-button:hover {
+    background: #90264f;
+    transform: scale(1.03);
+}
+
+@media (max-width: 600px) {
+    .intro-card {
+        padding: 20px;
+    }
+
+    .intro-card h1 {
+        font-size: 32px;
+    }
+}
+
+
+/* Pink scandal popup */
+
+#scandal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(70, 20, 45, 0.65);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 2000;
+    padding: 20px;
+}
+
+#scandal-overlay[hidden] {
+    display: none;
+}
+
+.scandal-popup {
+    background: #fff9fc;
+    border: 3px solid #f0a0bf;
+    border-radius: 25px;
+    padding: 30px;
+    width: 100%;
+    max-width: 420px;
+    max-height: 90vh;
+    overflow-y: auto;
+    text-align: center;
+
+    box-shadow: 0 15px 50px rgba(80, 20, 50, 0.3);
+    animation: popupAppear 0.3s ease;
+}
+
+.scandal-popup h2 {
+    color: #bb346e;
+    font-size: 25px;
+}
+
+.scandal-popup h3 {
+    color: #92385c;
+}
+
+.popup-avatar {
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 15px auto;
+}
+
+#popup-event {
+    color: #8e4665;
+    font-size: 17px;
+}
+
+.popup-stats {
+    background: #ffedf4;
+    padding: 12px;
+    border-radius: 15px;
+    margin: 20px 0;
+}
+
+#close-scandal {
+    background: #c83f7e;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 15px 25px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#close-scandal:hover {
+    background: #a82c65;
+}
+
+@keyframes popupAppear {
+    from {
+        opacity: 0;
+        transform: scale(0.85);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
